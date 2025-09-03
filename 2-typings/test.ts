@@ -1,8 +1,21 @@
 'use strict';
 
-import makeOrdinal from './makeOrdinal'
-import isFinite from './isFinite'
-import isSafeNumber from './isSafeNumber'
+// import makeOrdinal from './makeOrdinal.ts'
+// import isFinite from './isFinite.ts'
+// import isSafeNumber from './isSafeNumber.ts'
+
+const makeOrdinal = (x: string) => {
+    return x;
+}
+
+const isFinite = (x: number) => {
+    return x;
+}
+
+const isSafeNumber = (x: number) => {
+    return x;
+}
+
 
 const TEN: number = 10;
 const ONE_HUNDRED: number = 100;
@@ -33,7 +46,7 @@ const TENTHS_LESS_THAN_HUNDRED: string[] = [
  * @param {boolean} [asOrdinal] - Deprecated, use toWordsOrdinal() instead!
  * @returns {string}
  */
-const toWordsPre = (number1: number | string, asOrdinal: boolean): string => {
+const toWordsPre = (number1: number | string, asOrdinal?: boolean): string => {
     const num: number = parseInt(String(number1), 10);
 
     if (!isFinite(num)) {
